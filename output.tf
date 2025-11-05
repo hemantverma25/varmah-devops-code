@@ -1,7 +1,7 @@
 # public ip of my ec2 vm
 
 output "my-ec2-publicIP" {
-    value = aws_instance.example.public_ip
+  value = aws_instance.example.public_ip
 }
 
 # ec2 machine instance id
@@ -11,7 +11,9 @@ output "my-ec2ID" {
 }
 
 resource "local_file" "vermah-data" {
-  content = aws_instance.example.public_ip
+  content  = aws_instance.example.public_ip
   filename = "${path.module}/myip.txt"
+  # making manual dependency
+  depends_on = [aws_instance.example]
 }
 
