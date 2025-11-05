@@ -19,6 +19,4 @@ jobs:
         git version
         whoami
         ls -a
-  build-job:
-  infra-job:
 
