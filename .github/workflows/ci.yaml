@@ -13,15 +13,12 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps: # what exactly you want to run in ubuntu machine
-    - name: taking code from my repo
-      uses: actions/checkout@v5
-      with:
-        ref: dryrun-aws
-            
     - name: hello world printing
       run: 
         echo "Hello world"
         git version
         whoami
         ls -a
+  build-job:
+  infra-job:
 
