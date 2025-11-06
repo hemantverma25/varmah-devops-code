@@ -13,12 +13,21 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps: # what exactly you want to run in ubuntu machine
-    - name: hello world printing
-      run: 
+    - name: taking code from my repo
+      uses: actions/checkout@v5
+      with:
+        ref: dryrun-aws 
+    # terrafor installing 
+    - name: installing terraform 
+      uses: hashicorp/setup-terraform@v3
+    # running some commands 
+     - name: my first step to test github action 
+      run: |
         echo "Hello world"
         git version
         whoami
         ls -a
+        terraform version
   build-job:
   infra-job:
 
