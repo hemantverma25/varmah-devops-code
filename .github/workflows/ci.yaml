@@ -21,7 +21,7 @@ jobs:
     - name: installing terraform 
       uses: hashicorp/setup-terraform@v3
     # running some commands 
-     - name: my first step to test github action 
+    - name: my first step to test github action 
       run: |
         echo "Hello world"
         git version
