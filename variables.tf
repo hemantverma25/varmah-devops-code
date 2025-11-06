@@ -24,3 +24,11 @@ variable "private-key-algo" {
 variable "key-size" {
   type = string
 }
+
+variable "my-vpc-id" {
+  type = string
+}
+
+variable "my-sec-group-name" {
+  type = string
+}
