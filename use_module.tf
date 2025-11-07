@@ -21,9 +21,9 @@ provider "aws" {
 
 module "vermah-module-ec2" {
     source = "./modules/ec2"
-    vm-name = "vermah-vm-1"
+    vm-name = "vermah-vmby-module-dayfinal"
     vm-size = "t2.nano"
-    ec2-key-name = "vermah-day3-key"
+    ec2-key-name = "vermah-module-dayfinal"
     vermah-ami-id = "ami-0a25a306450a2cba3"
     private-key-algo = "RSA"
     key-size = 4096
